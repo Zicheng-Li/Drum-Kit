@@ -1,10 +1,21 @@
-
+// check button press
 for(let i = 0; i < document.querySelectorAll(".drum").length; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function (){
     // let audio= new Audio("sounds/tom-1.mp3");
     // audio.play();
     let b=this.innerHTML;
-    switch(b){
+    makeSound(b);
+    
+}); 
+}
+
+// check keyboard press
+document.addEventListener("keydown", function(event){
+    makeSound(event.key);
+})
+
+function makeSound(key){
+    switch(key){
         case "w":
             let audio= new Audio("sounds/tom-1.mp3");
             audio.play();
@@ -37,9 +48,7 @@ for(let i = 0; i < document.querySelectorAll(".drum").length; i++){
         default:
             console.log(b);
 }
-}); 
 }
-
 
  // if use handleClick(), it will call the function once the listener is added, it will return the function, the return is undefined. handleClick is only run when you click.
 // function handleClick(){
