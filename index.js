@@ -1,7 +1,9 @@
 
 for(let i = 0; i < document.querySelectorAll(".drum").length; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click", function (){
-    alert("i got");
+    // let audio= new Audio("sounds/tom-1.mp3");
+    // audio.play();
+    this.style.color="red"
 }); 
 }
 
@@ -10,3 +12,24 @@ for(let i = 0; i < document.querySelectorAll(".drum").length; i++){
 // function handleClick(){
 //     alert("i got");
 // }
+
+function add(num1,num2){
+    return num1 + num2;
+
+}
+
+function subtract(num1,num2){
+    return num1 - num2;
+}
+
+function calculator(num1,num2,operator){
+    return operator(num1,num2);
+}
+// calculator(2,3,add);  higher order function
+// we can have constructor function, just like the factory that product the same objects
+
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+}
+let person1 = new Person("John",30);
