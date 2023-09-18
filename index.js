@@ -5,7 +5,6 @@ for(let i = 0; i < document.querySelectorAll(".drum").length; i++){
     // audio.play();
     let b=this.innerHTML;
     makeSound(b);
-    
 }); 
 }
 
@@ -66,7 +65,7 @@ function subtract(num1,num2){
 function calculator(num1,num2,operator){
     return operator(num1,num2);
 }
-// calculator(2,3,add);  higher order function
+// calculator(2,3,add);  higher order function, callback function
 // we can have constructor function, just like the factory that product the same objects
 
 function Person(name,age){
