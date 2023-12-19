@@ -5,12 +5,14 @@ for(let i = 0; i < document.querySelectorAll(".drum").length; i++){
     // audio.play();
     let b=this.innerHTML;
     makeSound(b);
+    buttonAnimation(b);
 }); 
 }
 
 // check keyboard press
 document.addEventListener("keydown", function(event){
     makeSound(event.key);
+    buttonAnimation(event.key);
 })
 
 function makeSound(key){
@@ -76,3 +78,11 @@ function Person(name,age){
     }
 }
 let person1 = new Person("John",30);
+
+function buttonAnimation(currentKey){
+    let activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+    setTimeout(function(){
+        activeButton.classList.remove("pressed");
+    },100);
+} 
